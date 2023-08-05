@@ -12,12 +12,12 @@
 		<h2>This is a test update</h2>
     <script>
         // Access the environment variable 'GPT_KEY' set in AWS Amplify
-        const websiteName = process.env.GPT_KEY;
+        const gptKey = process.env.GPT_KEY;
 
         // Check if the environment variable is available
-        if (websiteName) {
+        if (gptKey) {
             // Print the first three characters of the website name
-            const firstThreeChars = websiteName.slice(0, 3);
+            const firstThreeChars = gptKey.slice(0, 3);
             console.log(`The first three characters of the website name are: ${firstThreeChars}`);
         } else {
             console.error('GPT_KEY environment variable not set.');
