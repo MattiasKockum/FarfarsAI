@@ -1,0 +1,31 @@
+version: 1
+frontend:
+  phases:
+    # IMPORTANT - Please verify your build commands for the frontend
+    build:
+      commands:
+        - npm install # Install frontend dependencies
+        - npm run build # Build the frontend code (replace with your build command)
+  artifacts:
+    baseDirectory: client
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - 'node_modules/**/*' # Cache node_modules for faster build time
+
+backend:
+  phases:
+    # IMPORTANT - Please verify your build commands for the backend
+    build:
+      commands:
+        - npm install # Install backend dependencies
+        - npm run build # Build the backend code (replace with your build command)
+  artifacts:
+    # IMPORTANT - Please verify your build output directory for the backend
+    baseDirectory: server
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - 'node_modules/**/*' # Cache node_modules for faster build time
