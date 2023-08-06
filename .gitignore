@@ -1,0 +1,24 @@
+# Node.js / npm
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# AWS Amplify
+.amplify/
+amplify-*
+.env
+.DS_Store
+amplify.yml
+build/
+
+# IDE/Editor specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# macOS specific files
+.DS_Store
+
+# OS generated files
+Thumbs.db
