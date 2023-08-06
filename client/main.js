@@ -1,14 +1,15 @@
-// Assume you are using Axios for making HTTP requests
-// Make sure to include Axios in your frontend dependencies
-// using npm install axios or yarn add axios
-const axios = require('axios');
+import axios from 'axios';
 
 function fetchDataFromServer() {
   axios.post('/api/slice')
     .then((response) => {
       const { firstThreeCharacters } = response.data;
       console.log('First three characters:', firstThreeCharacters);
-      // Do whatever you want with the first three characters
+
+      // Insert the first three characters into the page
+      const apiKeyElement = document.createElement('p');
+      apiKeyElement.textContent = `First three characters of API key: ${firstThreeCharacters}`;
+      document.body.appendChild(apiKeyElement);
     })
     .catch((error) => {
       console.error('Error fetching data:', error);
